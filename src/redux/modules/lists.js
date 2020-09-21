@@ -394,9 +394,52 @@ function fetchSuccess (state, action) {
         return mapping
     }, {})
 
+    let lists = null
+    console.log(`process.env.KANBAN ---> : ${process.env.KANBAN}`)
     // Create Lists.
-    const loadedLists = ImmutableList(
-        labelList.map(label => {
+    if (!process.env.KANBAN) {
+        const getFilterItem = forTime => item => {
+            if (item.due && forTime !== 'backlog') {
+                if (forTime === 'next') {
+                    const today = new Date().getTime()
+                    const itemDate = Date.parse(item.due.date)
+                    return itemDate > today
+                } else if (forTime === 'today') {
+                    return item.due.date === '2020-09-21'
+                } else if (forTime === 'done') {
+                    return ''
+                } else {
+                    throw Error('Invalid forTime')
+                }
+            } else if (!item.due && forTime === 'backlog') {
+                return true
+            }
+            return false
+        }
+        const timeLists = ['backlog', 'next', 'today', 'done']
+        lists = timeLists.map((time, key) => {
+            const filterItem = getFilterItem(time)
+            return new List({
+                id: 'timeList' + key,
+                title: time,
+                items: ImmutableList(
+                    items
+                        .filter(item => filterItem(item))
+                        .map(
+                            item =>
+                                new Item({
+                                    ...item,
+                                    due_date_utc: item.due && item.due.date,
+                                    recurring: item.due && item.due.is_recurring,
+                                    text: item.content,
+                                    project: projectIdMap[item.project_id],
+                                })
+                        )
+                ),
+            })
+        })
+    } else {
+        lists = labelList.map(label => {
             return new List({
                 id: label.id,
                 title: label.name,
@@ -426,8 +469,8 @@ function fetchSuccess (state, action) {
                 ),
             })
         })
-    )
-
+    }
+    const loadedLists = ImmutableList(lists)
     // Create list filters
     const filteredListIds = Set(state.filteredLists.map(el => el.id))
     const filteredLists = loadedLists.filter(el => filteredListIds.has(el.id))
