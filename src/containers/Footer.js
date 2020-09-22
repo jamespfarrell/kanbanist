@@ -7,7 +7,10 @@ export default class Footer extends React.Component {
         return (
             <div>
                 <h3 style={{ marginLeft: '20px' }}>
-                    "The only thing that's real is the way we look at things" <span role='img'>🦜</span>
+                    "The only thing that's real is the way we look at things"{' '}
+                    <span role='img' aria-label='toucan'>
+                        🦜
+                    </span>
                 </h3>
                 {/* <nav className="Footer bp3-navbar bp3-dark">
                     <div className="bp3-navbar-group bp3-align-left">
