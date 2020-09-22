@@ -1,679 +1,673 @@
 @font-face {
     font-family: 'pacificoregular';
-    src: url('./fonts/pacifico-webfont.woff2') format('woff2'),
-         url('./fonts/pacifico-webfont.woff') format('woff');
+    src: url('./fonts/pacifico-webfont.woff2') format('woff2'), url('./fonts/pacifico-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 .App {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Screen reader utilities, from Bootstrap 4 */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
 }
 
 .sr-only-focusable:active,
 .sr-only-focusable:focus,
 .sr-only-focusable.active {
-  position: static;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-  -webkit-clip-path: none;
-  clip-path: none;
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    -webkit-clip-path: none;
+    clip-path: none;
 }
 
 .Header .bp3-navbar-heading a,
 .Header .bp3-navbar-heading a:hover,
 .Header .bp3-navbar-heading a:visited {
-  text-decoration: none !important;
-  color: inherit !important;
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 .main-content {
-  display: flex;
-  flex-direction: column;
-  max-width: 100vw;
-  flex: 1;
-  min-height: calc(100vh - 50px - 50px);
-  background-color: #E1E8ED;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    flex: 1;
+    min-height: calc(100vh - 50px - 50px);
+    background-color: #e1e8ed;
 }
 
 .page {
-  width: 100%;
-  flex: 1;
-  background-color: white;
-  overflow: auto;
+    width: 100%;
+    flex: 1;
+    background-color: white;
+    overflow: auto;
 }
 
 .page-content {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  min-width: 300px;
-  max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 1000px;
 }
 
 .video-wrapper {
-  position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
 }
 
 .video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .font-roboto {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .Header .bp3-navbar-heading {
-  font-size: 1.5em;
-  color: #30404D;
-  margin-right: 10px !important;
+    font-size: 1.5em;
+    color: #30404d;
+    margin-right: 10px !important;
 }
 
 .header-right + .header-right {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 p {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .Board {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  height: 100%;
-  min-height: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    min-height: 0;
 }
 
 .Board-inner {
-  flex: 1;
-  background-color: #F5F8FA;
-  width: 100%;
-  padding: 15px;
+    flex: 1;
+    background-color: #f5f8fa;
+    width: 100%;
+    padding: 15px;
 }
 
 .BoardToaster-toaster {
-  bottom: 65px !important;
+    bottom: 65px !important;
 }
 
 .FilterMenu {
-  width: 200px;
-  padding: 20px;
+    width: 200px;
+    padding: 20px;
 }
 
 .DueDateFilterMenu {
-  width: 100%;
+    width: 100%;
 }
 
 .FilterMenu-checkboxes {
-  max-height: calc((100vh - 200px) / 1.5);
-  overflow-y: auto;
+    max-height: calc((100vh - 200px) / 1.5);
+    overflow-y: auto;
 }
 
 .ListsPanel {
-  min-height: 0;
-  flex: 1;
+    min-height: 0;
+    flex: 1;
 }
 
 .ListPanel-inner {
-  padding: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  height: 100%;
-  overflow-x: auto;
-  user-select: none;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: 100%;
+    overflow-x: auto;
+    user-select: none;
 }
 
 .List {
-  padding: 6px;
-  border-radius: 3px;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
+    padding: 6px;
+    border-radius: 3px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .list-panel-item {
-  flex: 0 0 275px;
+    flex: 0 0 275px;
 }
 
 .list-panel-item + .list-panel-item {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 .list-panel-item:last-child {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .list-panel-title {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 5px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
 }
 
 .list-panel-title-text-div {
-  display: flex;
-  padding-left: 5px;
-  width: 215px;
-  height: 25px;
-  align-items: center;
+    display: flex;
+    padding-left: 5px;
+    width: 215px;
+    height: 25px;
+    align-items: center;
 
-  font-size: 16px;
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
 
 .list-panel-title-text {
-  width: 215px;
-  font-family: sans-serif;
+    width: 215px;
+    font-family: sans-serif;
 }
 
 .list-panel-title-close-button-div {
-  margin-left: 10px;
-  width: 30px;
+    margin-left: 10px;
+    width: 30px;
 }
 
 .list-panel-title-close-button {
-  opacity: 0.25;
+    opacity: 0.25;
 }
 
 .list-panel-title-close-button:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .List .new-list-item-input-wrapper {
-  padding: 0 5px 5px;
+    padding: 0 5px 5px;
 }
 
 .NewListInput-input {
-  width: 260px;
-  margin-right: 15px;
+    width: 260px;
+    margin-right: 15px;
 }
 
 .List .List-list-items-wrapper {
-  min-width: 265px;
-  overflow-y: hidden;
-  display: flex;
-  flex-direction: column;
-  padding: 5px 0px 5px 5px;
+    min-width: 265px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0px 5px 5px;
 }
 
 .List .List-list-items {
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
 }
 
 .List .List-list-items * {
-  /* don't allow the children of the scrollable element to be selected as an anchor node */
-  overflow-anchor: none;
+    /* don't allow the children of the scrollable element to be selected as an anchor node */
+    overflow-anchor: none;
 }
 
 .DraggableList {
-  background-color: #BFCCD6;
+    background-color: transparent;
 }
 
 .DraggableList:hover {
-  cursor: grab !important;
+    cursor: grab !important;
 }
 
 .BacklogList {
-  background-color: #8A9BA8;
+    background-color: #8a9ba8;
 }
 
 .ListItem {
-  padding: 13px;
-  width: 255px;
-  flex: 1 auto 255px;
-  background-color: white;
-  border: 1px solid #b5b5b5;
-  border-radius: 5px;
-  margin-bottom: 10px;
+    padding: 13px;
+    width: 255px;
+    flex: 1 auto 255px;
+    background-color: white;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .ListItem.dragging {
-  box-shadow: 0px 0px 20px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.75);
 }
 
 .ListItem-inner {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .ListItem-inner-top {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .ListItem .priority-4 .bp3-control-indicator {
-  border-color: RGB(255, 112, 102);
-  background: RGBA(255, 112, 102, 0.5) none;
+    border-color: RGB(255, 112, 102);
+    background: RGBA(255, 112, 102, 0.5) none;
 }
 
 .ListItem .priority-3 .bp3-control-indicator {
-  border-color: RGB(255, 154, 20);
-  background: RGBA(255, 154, 20, 0.5) none;
+    border-color: RGB(255, 154, 20);
+    background: RGBA(255, 154, 20, 0.5) none;
 }
 
 .ListItem .priority-2 .bp3-control-indicator {
-  border-color: RGB(82, 151, 255);
-  background: RGBA(82, 151, 255, 0.5) none;
+    border-color: RGB(82, 151, 255);
+    background: RGBA(82, 151, 255, 0.5) none;
 }
 
 .ListItem .priority-4 .bp3-control-indicator:hover {
-  border-color: RGB(255, 112, 102);
-  background: RGBA(255, 112, 102, 0.7) none;
+    border-color: RGB(255, 112, 102);
+    background: RGBA(255, 112, 102, 0.7) none;
 }
 
 .ListItem .priority-3 .bp3-control-indicator:hover {
-  border-color: RGB(255, 154, 20);
-  background: RGBA(255, 154, 20, 0.7) none;
+    border-color: RGB(255, 154, 20);
+    background: RGBA(255, 154, 20, 0.7) none;
 }
 
 .ListItem .priority-2 .bp3-control-indicator:hover {
-  border-color: RGB(82, 151, 255);
-  background: RGBA(82, 151, 255, 0.7) none;
+    border-color: RGB(82, 151, 255);
+    background: RGBA(82, 151, 255, 0.7) none;
 }
 
-
 .ListItem-inner-bottom {
-  padding-left: 22px;
-  margin-top: 6px;
+    padding-left: 22px;
+    margin-top: 6px;
 }
 
 .ListItem-edit-button + .ListItem-edit-button {
-  margin-left: 7px;
+    margin-left: 7px;
 }
 
 .ListItem-edit-buttons {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .ListItem-menu-button {
-  margin-left: 35px;
+    margin-left: 35px;
 }
 
 .ListItem-inner-bottom .non-edit-text {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .ListItem-inner-bottom .non-edit-text .left-align {
-  margin-right: auto;
+    margin-right: auto;
 }
 
 .ListItem-project-name {
-  margin-left: 7px;
-  font-size: 11px;
-  color: #8A9BA8;
+    margin-left: 7px;
+    font-size: 11px;
+    color: #8a9ba8;
 }
 
 .ListItem task-link-wrapper {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .ListItem .ListItem-task-icon {
-  cursor: pointer;
-  margin-left: 5px;
-  vertical-align: unset;
-  color: rgb(16, 107, 163);
-  visibility: hidden;
+    cursor: pointer;
+    margin-left: 5px;
+    vertical-align: unset;
+    color: rgb(16, 107, 163);
+    visibility: hidden;
 }
 
 .ListItem:hover .ListItem-task-icon {
-  visibility: visible;
+    visibility: visible;
 }
 
 .ListItem-recurring-icon {
-  color: #8A9BA8;
-  margin-right: 5px;
+    color: #8a9ba8;
+    margin-right: 5px;
 }
 
 .ListItem-project-duedate {
-  font-size: 11px;
-  cursor: pointer;
-  color: #0D8050;
-  margin-right: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #0d8050;
+    margin-right: 5px;
 }
 
 .ListItem-project-avatar {
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  margin-right: 5px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
 }
 
 .ListItem-inner-bottom .non-edit-text .overdue {
-  color: #C23030 !important;
+    color: #c23030 !important;
 }
 
 .ListItem-text {
-  max-width: 205px;
-  width: 100%;
-  overflow-wrap: break-word !important;
+    max-width: 205px;
+    width: 100%;
+    overflow-wrap: break-word !important;
 }
 
 .ListItem-text-formatted {
-  cursor: text;
-  border: 1px solid transparent;
-  padding-left: 2px;
+    cursor: text;
+    border: 1px solid transparent;
+    padding-left: 2px;
 }
 
 .ListItem-text-formatted:hover {
-  border: 1px solid RGBA(115, 134, 148, 0.4) ;
-  border-radius: 3px;
+    border: 1px solid RGBA(115, 134, 148, 0.4);
+    border-radius: 3px;
 }
 
 .ListItem-checkbox {
-  margin-top: 2px;
-  margin-bottom: 0px !important;
+    margin-top: 2px;
+    margin-bottom: 0px !important;
 }
 
 .ListItem-checkbox .bp3-control-indicator {
-  border-radius: 10px !important;
+    border-radius: 10px !important;
 }
 
 .ListItem:hover {
-  cursor: grab !important;
+    cursor: grab !important;
 }
 
 .list-item-spacer {
-  width: 100%;
-  height: 60px;
-  background-color: #5C7080;
-  margin-bottom: 10px;
-  border-radius: 3px;
+    width: 100%;
+    height: 60px;
+    background-color: #5c7080;
+    margin-bottom: 10px;
+    border-radius: 3px;
 }
 
 .NewListItemInput {
-  margin-top: 5px;
-  padding: 0px;
+    margin-top: 5px;
+    padding: 0px;
 }
 
 /* fixes the scrollbar showing issue the Jesse reported */
 .bp3-editable-text.bp3-multiline .bp3-editable-content {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
 
 .small-text {
-  font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 .home-paragraph {
-  font-size: 1.3em;
+    font-size: 1.3em;
 }
 
-.Home-Button + .Home-Button{
-  margin-left: 15px;
+.Home-Button + .Home-Button {
+    margin-left: 15px;
 }
 
 /* Blueprint */
 
 .bp3-button + .bp3-button {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 /* Misc. */
 a,
 a:hover,
 a:visited {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .Footer a,
 .Footer a:hover,
 .Footer a:visited {
-  color: inherit !important;
+    color: inherit !important;
 }
 
 .link,
 .link:hover {
-  text-decoration: underline !important;
+    text-decoration: underline !important;
 }
 
-::-webkit-scrollbar
-{
-  width: 8px;  /* for vertical scrollbars */
-  height: 12px; /* for horizontal scrollbars */
+::-webkit-scrollbar {
+    width: 8px; /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
 }
 
-::-webkit-scrollbar-track
-{
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb
-{
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 @media only screen and (max-width: 500px) {
-  .hide-if-small-500 {
-    display: none;
-  }
+    .hide-if-small-500 {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 750px) {
-  .hide-if-small-750 {
-    display: none;
-  }
+    .hide-if-small-750 {
+        display: none;
+    }
 }
 
 .border-less {
-  border: none !important;
+    border: none !important;
 }
 
 .margin-25px-auto {
-  margin: 25px auto;
+    margin: 25px auto;
 }
 
 .text-align-center {
-  text-align: center;
+    text-align: center;
 }
 
 .videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
 }
 .videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .color-0 {
-  border-bottom: solid 5px #95ef63;
+    border-bottom: solid 5px #95ef63;
 }
 
 .color-1 {
-  border-bottom: solid 5px #ff8581;
+    border-bottom: solid 5px #ff8581;
 }
 
 .color-2 {
-  border-bottom: solid 5px #ffc471;
+    border-bottom: solid 5px #ffc471;
 }
 
 .color-3 {
-  border-bottom: solid 5px #f9ec75;
+    border-bottom: solid 5px #f9ec75;
 }
 
 .color-4 {
-  border-bottom: solid 5px #a8c8e4;
+    border-bottom: solid 5px #a8c8e4;
 }
 
 .color-5 {
-  border-bottom: solid 5px #d2b8a3;
+    border-bottom: solid 5px #d2b8a3;
 }
 
 .color-6 {
-  border-bottom: solid 5px #e2a8e4;
+    border-bottom: solid 5px #e2a8e4;
 }
 
 .color-7 {
-  border-bottom: solid 5px #cccccc;
+    border-bottom: solid 5px #cccccc;
 }
 
 .color-8 {
-  border-bottom: solid 5px #fb886e;
+    border-bottom: solid 5px #fb886e;
 }
 
 .color-9 {
-  border-bottom: solid 5px #ffcc00;
+    border-bottom: solid 5px #ffcc00;
 }
 
 .color-10 {
-  border-bottom: solid 5px #74e8d3;
+    border-bottom: solid 5px #74e8d3;
 }
 
 .color-11 {
-  border-bottom: solid 5px #3bd5fb;
+    border-bottom: solid 5px #3bd5fb;
 }
 
 .color-12 {
-  border-bottom: solid 5px #dc4fad;
+    border-bottom: solid 5px #dc4fad;
 }
 
 .color-13 {
-  border-bottom: solid 5px #ac193d;
+    border-bottom: solid 5px #ac193d;
 }
 
 .color-14 {
-  border-bottom: solid 5px #d24726;
+    border-bottom: solid 5px #d24726;
 }
 
 .color-15 {
-  border-bottom: solid 5px #82ba00;
+    border-bottom: solid 5px #82ba00;
 }
 
 .color-16 {
-  border-bottom: solid 5px #03b3b2;
+    border-bottom: solid 5px #03b3b2;
 }
 
 .color-17 {
-  border-bottom: solid 5px #008299;
+    border-bottom: solid 5px #008299;
 }
 
 .color-18 {
-  border-bottom: solid 5px #5db2ff;
+    border-bottom: solid 5px #5db2ff;
 }
 
 .color-19 {
-  border-bottom: solid 5px #0072c6;
+    border-bottom: solid 5px #0072c6;
 }
 
 .color-20 {
-  border-bottom: solid 5px #000000;
+    border-bottom: solid 5px #000000;
 }
 
 .color-21 {
-  border-bottom: solid 5px #777777;
+    border-bottom: solid 5px #777777;
 }
-
 
 /* API v8 colours */
 .color-30 {
-  border-bottom: solid 5px #b8256f;
+    border-bottom: solid 5px #b8256f;
 }
 .color-31 {
-  border-bottom: solid 5px #db4035;
+    border-bottom: solid 5px #db4035;
 }
 .color-32 {
-  border-bottom: solid 5px #ff9933;
+    border-bottom: solid 5px #ff9933;
 }
 .color-33 {
-  border-bottom: solid 5px #fad000;
+    border-bottom: solid 5px #fad000;
 }
 .color-34 {
-  border-bottom: solid 5px #afb83b;
+    border-bottom: solid 5px #afb83b;
 }
 .color-35 {
-  border-bottom: solid 5px #7ecc49;
+    border-bottom: solid 5px #7ecc49;
 }
 .color-36 {
-  border-bottom: solid 5px #299438;
+    border-bottom: solid 5px #299438;
 }
 .color-37 {
-  border-bottom: solid 5px #6accbc;
+    border-bottom: solid 5px #6accbc;
 }
 .color-38 {
-  border-bottom: solid 5px #158fad;
+    border-bottom: solid 5px #158fad;
 }
 .color-39 {
-  border-bottom: solid 5px #14aaf5;
+    border-bottom: solid 5px #14aaf5;
 }
 .color-40 {
-  border-bottom: solid 5px #96c3eb;
+    border-bottom: solid 5px #96c3eb;
 }
 .color-41 {
-  border-bottom: solid 5px #4073ff;
+    border-bottom: solid 5px #4073ff;
 }
 .color-42 {
-  border-bottom: solid 5px #884dff;
+    border-bottom: solid 5px #884dff;
 }
 .color-43 {
-  border-bottom: solid 5px #af38eb;
+    border-bottom: solid 5px #af38eb;
 }
 .color-44 {
-  border-bottom: solid 5px #eb96eb;
+    border-bottom: solid 5px #eb96eb;
 }
 .color-45 {
-  border-bottom: solid 5px #e05194;
+    border-bottom: solid 5px #e05194;
 }
 .color-46 {
-  border-bottom: solid 5px #ff8d85;
+    border-bottom: solid 5px #ff8d85;
 }
 .color-47 {
-  border-bottom: solid 5px #808080;
+    border-bottom: solid 5px #808080;
 }
 .color-48 {
-  border-bottom: solid 5px #b8b8b8;
+    border-bottom: solid 5px #b8b8b8;
 }
 .color-49 {
-  border-bottom: solid 5px #ccac93;
+    border-bottom: solid 5px #ccac93;
 }
