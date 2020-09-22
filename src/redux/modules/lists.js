@@ -400,12 +400,12 @@ function fetchSuccess (state, action) {
     if (!process.env.KANBAN) {
         const getFilterItem = forTime => item => {
             if (item.due && forTime !== 'backlog') {
+                const today = new Date()
                 if (forTime === 'next') {
-                    const today = new Date().getTime()
                     const itemDate = Date.parse(item.due.date)
-                    return itemDate > today
+                    return itemDate > today.getTime()
                 } else if (forTime === 'today') {
-                    return item.due.date === '2020-09-21'
+                    return item.due.date === today.toISOString().split('T')[0]
                 } else if (forTime === 'done') {
                     return ''
                 } else {
@@ -471,6 +471,8 @@ function fetchSuccess (state, action) {
         })
     }
     const loadedLists = ImmutableList(lists)
+    console.log(`loadedLists : ${JSON.stringify(loadedLists, null, 2)}`)
+
     // Create list filters
     const filteredListIds = Set(state.filteredLists.map(el => el.id))
     const filteredLists = loadedLists.filter(el => filteredListIds.has(el.id))
