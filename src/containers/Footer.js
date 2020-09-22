@@ -1,12 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Icon, Position, Tooltip } from '@blueprintjs/core'
+// import { Link } from 'react-router-dom'
+// import { Icon, Position, Tooltip } from '@blueprintjs/core'
 
 export default class Footer extends React.Component {
     render () {
         return (
             <div>
-                <h3 style={{ marginLeft: '20px' }}>"The only thing that's real is the way we look at things" 🦜</h3>
+                <h3 style={{ marginLeft: '20px' }}>
+                    "The only thing that's real is the way we look at things" <span role='img'>🦜</span>
+                </h3>
                 {/* <nav className="Footer bp3-navbar bp3-dark">
                     <div className="bp3-navbar-group bp3-align-left">
                         <a href="https://github.com/mwakerman/kanbanist" target="_blank" rel="noopener noreferrer">
